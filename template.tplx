@@ -129,6 +129,7 @@
 \DeclareMathOperator{\Supp}{supp}
 \DeclareMathOperator{\hulp}{hulp}
 \DeclareMathOperator{\ulp}{ulp}
+\DeclareMathOperator{\conv}{conv}
 
 ((( super() )))
 

@@ -26,7 +26,7 @@ Then an ipython notebook like this:
 
 ![ipy after](/full-ipy.png)
 
-Will look like this PDF after running `convertpdf.sh "Homework 2" solutions2.pdf`:
+Will look like this PDF after running `convertpdf.sh "Homework 2" solutions2.ipynb`:
 
 ![ipy result](/result.png)
 
