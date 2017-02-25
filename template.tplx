@@ -1,0 +1,136 @@
+
+((* if not cell_style is defined *))
+    ((* set cell_style = 'style_ipython.tplx' *))
+((* endif *))
+
+% Inherit from the specified cell style.
+((* extends cell_style *))
+
+%===============================================================================
+% Latex Article
+%===============================================================================
+
+((* block docclass *))
+\documentclass{article}
+((* endblock docclass *))
+
+((* block title *))
+\title{<TODO INSERT TITLE HERE>}
+((* endblock title *))
+
+((* block author *))
+\author{Vladimir Feinberg}
+((* endblock author *))
+
+((* block definitions *))
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{fullpage}
+\usepackage{bbm}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+
+\def \mcX {\mathcal{X}}
+\def \mcL {\mathcal{L}}
+\def \mcY {\mathcal{Y}}
+\def \mcH {\mathcal{H}}
+\def \mcD {\mathcal{D}}
+\def \mcA {\mathcal{A}}
+\def \mcK {\mathcal{K}}
+
+\newcommand{\pa}[1]{ \left({#1}\right) }
+\def \P {\mathbb{P}}
+\def \E {\mathbb{E}}
+
+\def \bst {{\boldsymbol\theta}}
+\def \bsp {{\boldsymbol\phi}}
+\def \bse {{\boldsymbol\epsilon}}
+\def \N {\mathbb{N}}
+\def \Nbr {\mathcal{N}}
+\def \Q {\mathbb{Q}}
+\def \F {\mathbb{F}}
+\def \then {\implies &}
+\def \oif {\Longleftrightarrow &\,}
+\def \given {\text{Given }&}
+\def \assume {\text{Assume }&}
+\def \thfr {\therefore &\enskip}
+\def \bij {\leftrightarrow}
+\def \inj {\rightarrowtail}
+\def \sur {\twoheadedrightarrow}
+\def \Z {\mathbb{Z}}
+\def \R {\mathbb{R}}
+\def \C {\mathbb{C}}
+\def \iff {\Longleftrightarrow}
+\def \kron {\boldsymbol\delta}
+\def \indicator {\mathbbm{1}}
+
+\def\Tx{\textbf{x}}
+\def\Ty{\textbf{y}}
+\def\Tz{\textbf{z}}
+\def\quotient{\mathclose{}/\mathopen{}}
+\def\Tf{\textbf{f}}
+\def\Tv{\textbf{v}}
+\def\Ta{\textbf{a}}
+\def\Tq{\textbf{q}}
+\def\Tu{\textbf{u}}
+\def\Th{\textbf{h}}
+\def\Te{\textbf{e}}
+\def\Tc{{\textbf{c}}}
+\def\bsz{{\textbf{0}}}
+\def\Tg{\textbf{g}}
+\def\sumn{\sum_{n=0}^\infty}
+\def\limn{\lim_{n\rightarrow\infty}}
+\def\prodn{\prod_{n=0}^\infty}
+\DeclareMathOperator\adj{adj}
+
+\newcommand{\stc}[1]{\widetilde{#1}}   
+\newcommand{\set}[2]{ \left\{ #1 \,\middle|\, #2 \right\} }
+\newcommand{\shift}[1]{&\quad & \text{#1}\\}
+\newcommand{\lem}[1]{\text{\textbf{L.\ref{#1}}}}
+\newcommand{\card}[1]{\left\vert{#1}\right\vert}
+\newcommand{\Ps}[1]{\mathcal{P}\left({ #1 }\right)}
+\newcommand{\colv}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\mat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\detmat}[1]{\begin{vmatrix} #1 \end{vmatrix}}
+\newcommand{\spanb}[1]{\text{span}\{ #1 \}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\Inner}[1]{\langle #1 \rangle}
+\newcommand{\Innercpy}[1]{\langle #1, #1 \rangle}
+\newcommand{\norm}[1]{\left\| #1 \right\|}% use instead of $\|x\|$
+\newcommand{\xit}[1]{ \Tx^{\left({#1}\right)} }
+
+\def\eqd{\mathrel{\overset{\Delta}{=}}}
+
+\DeclareMathOperator{\band}{band}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\vcdim}{VC-dim}
+\DeclareMathOperator*{\Err}{\text{err}}
+\DeclareMathOperator*{\ErrE}{\mathbb{E}}
+\DeclareMathOperator{\Tr}{tr}
+\DeclareMathOperator{\Dim}{dim}
+\DeclareMathOperator{\Rank}{rank}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\proj}{proj}
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\Diam}{diam}
+\DeclareMathOperator{\Int}{int}
+\DeclareMathOperator{\Clo}{clo}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\MyRe}{Re}
+\DeclareMathOperator{\MyIm}{Im}
+\DeclareMathOperator{\Supp}{supp}
+\DeclareMathOperator{\hulp}{hulp}
+\DeclareMathOperator{\ulp}{ulp}
+
+((( super() )))
+
+((* endblock definitions *))
+
