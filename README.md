@@ -2,7 +2,7 @@
 
 ## How to install
 
-1. Add this repo to your path (or run `./install.sh` in the repo root, which does just that).
+1. Add this repo to your path (or run `install.sh` which does just that).
 
 ## How to use with latex content in Jupyter
 
@@ -24,7 +24,7 @@ With a cell highlighted, click on the cell menu > cell type > raw.
 
 Then an ipython notebook like this:
 
-![ipy after](/typical.png)
+![ipy after](/full-ipy.png)
 
 Will look like this PDF after running `convertpdf.sh "Homework 2" solutions2.pdf`:
 
