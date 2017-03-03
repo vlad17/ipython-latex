@@ -37,6 +37,6 @@ cd /tmp
 
 TEMPLATE=template-$BASHPID.tplx
 
-sed -e "s/<TODO INSERT TITLE HERE>/$TITLE/g" "$DIR/template.tplx" > $TEMPLATE
-
+sed -e "s/<TODO INSERT TITLE HERE>/$TITLE/g" "$DIR/template.tplx" > "pre-$TEMPLATE"
+sed -e "s|<TODO INSERT PATH HERE>|$DIR|g" "pre-$TEMPLATE" > $TEMPLATE
 jupyter nbconvert --to pdf --template $TEMPLATE $SRCFILE 
