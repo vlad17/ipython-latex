@@ -1,5 +1,6 @@
-
+\usepackage{lmodern}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{enumerate}
@@ -32,14 +33,19 @@
 \def \indicator {\mathbbm{1}}
 
 \def\Ta{\textbf{a}}
+\def\Tm{\textbf{m}}
 \def\Tb{\textbf{b}}
 \def\Tc{\textbf{c}}
 \def\Td{\textbf{d}}
 \def\Te{\textbf{e}}
 \def\Tv{\textbf{v}}
 \def\Tx{\textbf{x}}
+\def\Tw{\textbf{w}}
 \def\Ty{\textbf{y}}
+\def\Tk{\textbf{k}}
+\def\Tt{\textbf{t}}
 \def\Tz{\textbf{z}}
+\def\Tl{\textbf{l}}
 \def\quotient{\mathclose{}/\mathopen{}}
 \def\Tf{\textbf{f}}
 \def\Th{\textbf{h}}
@@ -49,7 +55,10 @@
 \def\prodn{\prod_{n=0}^\infty}
 
 \def\bsz{\textbf{0}}
+\def\bs1{\textbf{1}}
 \def\bsa{{\boldsymbol\alpha}}
+\def\bse{{\boldsymbol\eta}}
+\def \bss{ {\boldsymbol\sigma}}
 
 \DeclareMathOperator{\conv}{conv}
 \DeclareMathOperator\cat{cat}
@@ -64,6 +73,7 @@
 
 \newcommand{\stc}[1]{\widetilde{#1}}   
 \newcommand{\set}[2]{ \left\{ #1 \,\middle|\, #2 \right\} }
+\newcommand{\idx}[3]{ \left\{ #1 \right\}_{ #2 }^{ #3 } }
 \newcommand{\shift}[1]{&\quad & \text{#1}\\}
 \newcommand{\lem}[1]{\text{\textbf{L.\ref{#1}}}}
 \newcommand{\card}[1]{\left\vert{#1}\right\vert}
@@ -73,9 +83,9 @@
 \newcommand{\spanb}[1]{\text{span}\{ #1 \}}
 \newcommand{\abs}[1]{\left|#1\right|}
 \newcommand{\opcat}[1]{#1^{\text{op}}}
-\newcommand{\Inner}[1]{\langle #1 \rangle}
-\newcommand{\Innercpy}[1]{\langle #1, #1 \rangle}
-\newcommand{\norm}[1]{\mathopen\| #1 \mathclose\|}% use instead of $\|x\|$
+\newcommand{\Inner}[1]{\left\langle #1 \right\rangle}
+\newcommand{\Innercpy}[1]{\Inner{ #1, #1 }}
+\newcommand{\norm}[1]{\left\| #1 \right\|}% use instead of $\|x\|$
 
 \def\eqd{\mathrel{\overset{\Delta}{=}}}
 
@@ -95,6 +105,8 @@
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\MyRe}{Re}
 \DeclareMathOperator{\MyIm}{Im}
+\DeclareMathOperator{\image}{image}
+\DeclareMathOperator{\colim}{colim}
 \DeclareMathOperator{\Supp}{supp}
 \DeclareMathOperator{\Var}{var}
 \DeclareMathOperator{\Hom}{hom}
@@ -102,14 +114,16 @@
 \DeclareMathOperator{\El}{el}
 \DeclareMathOperator\power{{\mathcal{P}}}
 \DeclareMathOperator{\Nat}{Nat}
-
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\vectorize}{vec}
+\DeclareMathOperator{\matricize}{mat}
 
 % probability stuff
 \def \sa {{$\sigma$-algebra}}
 \def\OR{{\overline{\R}}}
 \def\OX{{\overline{X}}}
 
-
+\def\mcU{{\mathcal{U}}}
 \def \mcX {\mathcal{X}}
 \def \mcS {\mathcal{S}}
 \def \mcY {\mathcal{Y}}
