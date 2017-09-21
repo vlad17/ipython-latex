@@ -77,6 +77,8 @@
 \newcommand{\vsigma}{ {\boldsymbol\sigma}}
 \newcommand{\vtheta}{ {\boldsymbol\theta}}
 \newcommand{\vdelta}{ {\boldsymbol\delta}}
+\newcommand{\vlambda}{ {\boldsymbol\lambda}}
+\newcommand{\vmu}{ {\boldsymbol\mu}}
 
 
 % math function arrows, misc binary math ops
@@ -131,18 +133,31 @@
 \newcommand{\indicator}{\mathbbm{1}}
 \DeclareMathOperator{\Laplace}{Laplace}
 \DeclareMathOperator{\Poisson}{Poisson}
+\DeclareMathOperator{\Exponential}{Exponential}
+\DeclareMathOperator{\Multinomial}{Multinomial}
+\DeclareMathOperator{\Bernoulli}{Bernoulli}
 \DeclareMathOperator{\Uniform}{Uniform}
+\DeclareMathOperator{\Binomial}{Binomial}
+\DeclareMathOperator{\GammaDist}{Gamma}
 \DeclareMathOperator\mathProb{\mathbb{P}}
+\renewcommand{\d}[1]{\mathop{\mathrm{d} #1 }}
+
+% distributions
+\newcommand{\disteq}{\overset{d}{=}}
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
 
 \renewcommand{\P}{\mathProb} % need to overwrite stupid paragraph symbol
 \DeclareMathOperator\mathExp{\mathbb{E}}
+\DeclareMathOperator*\mathExpUnder{\mathbb{E}}
 \newcommand{\E}{\mathExp}
 
 \newcommand{\sa}{{$\sigma$-algebra}}
 \newcommand{\OR}{{\overline{\R}}}
 \newcommand{\OX}{{\overline{X}}}
 \DeclareMathOperator{\power}{{\mathcal{P}}}
-\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\cov}{Cov}
 
 % \set{from set}{condition} with set-builder notation
 \newcommand{\set}[2]{ \left\{ #1 \,\middle|\, #2 \right\} }
@@ -150,7 +165,7 @@
 % linear-algebra related
 \newcommand{\mat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 \newcommand{\detmat}[1]{\begin{vmatrix} #1 \end{vmatrix}}
-\newcommand{\spanb}[1]{\text{span}\{ #1 \}}
+\DeclareMathOperator{\spanb}{span}
 \DeclareMathOperator{\conv}{conv} % convex hull
 \DeclareMathOperator{\cone}{cone}
 \DeclareMathOperator{\vectorize}{vec}
@@ -162,14 +177,22 @@
 \DeclareMathOperator*{\argmin}{argmin}
 \DeclareMathOperator*{\proj}{proj}
 
-% misc
-\DeclareMathOperator{\diam}{diam}
-\DeclareMathOperator{\sgn}{sgn}
+% complex analysis
 \DeclareMathOperator{\MyRe}{Re}
 \DeclareMathOperator{\MyIm}{Im}
 \DeclareMathOperator{\image}{image}
-\DeclareMathOperator{\colim}{colim}
 \DeclareMathOperator{\supp}{supp}
+
+% typical numerical operators
+\DeclareMathOperator{\sgn}{sgn}
+
+% graphs
+\DeclareMathOperator{\diam}{diam}
+
+% constants
+\renewcommand{\d}[1]{\mathop{\mathrm{d} #1 }}
+\newcommand{\e}{\mathrm{e}}
+\renewcommand{\i}{\imath}
 
 % \bigtimes: large indexed cross product
 \makeatletter
@@ -210,3 +233,4 @@
 \DeclareMathOperator{\Hom}{hom}
 \DeclareMathOperator{\Ob}{ob}
 \DeclareMathOperator{\El}{el}
+\DeclareMathOperator{\colim}{colim}
