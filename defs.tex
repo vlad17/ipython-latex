@@ -17,6 +17,7 @@
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{mathrsfs}
+\usepackage{mathtools}
 \usepackage[all]{xy}
 
 % include graphics with \includegraphics
@@ -79,6 +80,9 @@
 \newcommand{\vdelta}{ {\boldsymbol\delta}}
 \newcommand{\vlambda}{ {\boldsymbol\lambda}}
 \newcommand{\vmu}{ {\boldsymbol\mu}}
+\newcommand{\vvartheta}{ {\boldsymbol\vartheta}}
+\newcommand{\vbeta}{ {\boldsymbol\beta}}
+\newcommand{\vphi}{ {\boldsymbol\phi}}
 
 
 % math function arrows, misc binary math ops
@@ -136,11 +140,15 @@
 \DeclareMathOperator{\Exponential}{Exponential}
 \DeclareMathOperator{\Multinomial}{Multinomial}
 \DeclareMathOperator{\Bernoulli}{Bernoulli}
+\DeclareMathOperator{\Categorical}{Categorical}
 \DeclareMathOperator{\Uniform}{Uniform}
 \DeclareMathOperator{\Binomial}{Binomial}
 \DeclareMathOperator{\GammaDist}{Gamma}
+\DeclareMathOperator{\NegativeBinomial}{NegativeBinomial}
 \DeclareMathOperator\mathProb{\mathbb{P}}
 \renewcommand{\d}[1]{\mathop{\mathrm{d} #1 }}
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{ #1\;\delimsize\|\;#2 }
+\newcommand{\dkl}[2]{\mathop{D_\text{KL}}\infdivx{#1}{#2}}
 
 % distributions
 \newcommand{\disteq}{\overset{d}{=}}
@@ -156,8 +164,8 @@
 \newcommand{\OR}{{\overline{\R}}}
 \newcommand{\OX}{{\overline{X}}}
 \DeclareMathOperator{\power}{{\mathcal{P}}}
-\DeclareMathOperator{\var}{Var}
-\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\cov}{cov}
 
 % \set{from set}{condition} with set-builder notation
 \newcommand{\set}[2]{ \left\{ #1 \,\middle|\, #2 \right\} }
@@ -175,6 +183,7 @@
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\proj}{proj}
 
 % complex analysis
