@@ -133,9 +133,12 @@
 \newcommand{\mcY}{\mathcal{Y}}
 \newcommand{\mcZ}{\mathcal{Z}}
 
-% measure theory
+% measure theory, distributions
 \newcommand{\indicator}{\mathbbm{1}}
 \DeclareMathOperator{\Laplace}{Laplace}
+\DeclareMathOperator{\soft}{soft}
+\DeclareMathOperator{\hard}{hard}
+\DeclareMathOperator{\clo}{clo}
 \DeclareMathOperator{\Poisson}{Poisson}
 \DeclareMathOperator{\Exponential}{Exponential}
 \DeclareMathOperator{\Multinomial}{Multinomial}
@@ -147,9 +150,12 @@
 \DeclareMathOperator{\GammaDist}{Gamma}
 \DeclareMathOperator{\NegativeBinomial}{NegativeBinomial}
 \DeclareMathOperator\mathProb{\mathbb{P}}
+\DeclareMathOperator\sub{sub}
 \renewcommand{\d}[1]{\mathop{\mathrm{d} #1 }}
 \DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{ #1\;\delimsize\|\;#2 }
 \newcommand{\dkl}[2]{\mathop{D_\text{KL}}\infdivx{#1}{#2}}
+\newcommand{\sg}{\mathop{\mathrm{SG}}}
+\newcommand{\se}{\mathop{\mathrm{SE}}}
 
 % distributions
 \makeatletter
@@ -181,6 +187,9 @@
 \newcommand{\CE}[2]{ \mathExp\left[ #1 \,\middle|\, #2 \right] }
 
 % linear-algebra related
+\newcommand{\rip}{\operatorname{RIP}}
+\DeclareMathOperator{\svd}{svd}
+\newcommand{\frob}[1]{\norm{#1}_{\mathrm{F}}}
 \newcommand{\mat}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 \newcommand{\detmat}[1]{\begin{vmatrix} #1 \end{vmatrix}}
 \DeclareMathOperator{\spanb}{span}
@@ -254,6 +263,13 @@
 \DeclareMathOperator{\El}{el}
 \DeclareMathOperator{\colim}{colim}
 \DeclareMathOperator{\Sym}{Sym}
+% restriction of a function to a domain
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
 
 % references
 \newcommand{\figref}[1]{Figure~\ref{fig:#1}}
