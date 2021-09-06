@@ -254,3 +254,19 @@
 \DeclareMathOperator{\El}{el}
 \DeclareMathOperator{\colim}{colim}
 \DeclareMathOperator{\Sym}{Sym}
+
+% references
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\secref}[1]{Section~\ref{sec:#1}}
+
+% centered figure with \autofig{filepath}{\label{fig:somelabel}}{caption}
+\newcommand{\autofig}[3]{
+  \begin{figure}[!ht]
+    \begin{center}
+      \includegraphics[width=0.8\columnwidth]{#1}
+    \end{center}
+    \caption{#3}
+    #2
+\end{figure}
+}
